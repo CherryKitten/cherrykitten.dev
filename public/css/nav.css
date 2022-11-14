@@ -1,5 +1,15 @@
 nav {
   background-color: var(--background-secondary);
+  position: sticky;
+  top: 0;
+}
+
+nav h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 18px;
+  text-align: left;
+  float: left;
 }
 
 li {
@@ -7,8 +17,8 @@ li {
 }
 
 ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style: none;
   text-align: right;
 }
@@ -21,7 +31,7 @@ ul li {
 
 ul li a {
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text);
   text-decoration: none;
   display: block;
   padding: 16px;
@@ -32,8 +42,8 @@ ul li:hover {
 }
 
 ul li i {
-  color: #fff;
-  float: right;
-  padding-left: 10px;
-  padding-top: 0px;
+  color: var(--pine);
+  float: left;
+  padding-right: 10px;
+  padding-top: 0;
 }

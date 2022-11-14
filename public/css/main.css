@@ -37,16 +37,37 @@
 
 body {
   background-color: var(--background-primary);
+  min-height: 100vh;
 }
 
 h1,
-p {
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
   color: var(--text);
 }
 
+a {
+  color: var(--foam);
+}
+.content {
+  text-align: center;
+  width: 100%;
+}
+
 #footer {
-  position: absolute;
+  margin: 0;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  height: 20px;
   background-color: var(--background-secondary);
+}
+
+#footer p {
+  margin: 0;
 }

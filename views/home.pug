@@ -1,6 +1,5 @@
 extends main
 
 block content
-    p Welcome to my Website.
-    p It's WIP.
-    p Nothing to see here yet.
+    div.content
+        include:markdown-it(html) ../Cherrykitten/README.md

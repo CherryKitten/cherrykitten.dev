@@ -1,23 +1,28 @@
 doctype html
+
 html(lang='en')
-    head
+    block head
         title Cherrykitten - #{title}
         link(rel="stylesheet", href='/css/main.css')
         link(rel="stylesheet", href="/css/nav.css")
-        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css")
     body
         nav
             div
+                h1 #{title}
                 ul
                     li
                         a(href="/") Home
+                            i(class="fa-solid fa-house")
+
                     li
                         a(href="/social") Social
+                            i(class="fa-solid fa-circle-user")
                     li
                         a(href="/projects") Projects
+                            i(class="fa-solid fa-flask")
                     li
                         a(href="/misc") Misc
-        h1 #{title}
         block content
             p Work in progress.
         block foot

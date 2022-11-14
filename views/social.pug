@@ -1,1 +1,47 @@
 extends main
+append head
+    link(rel="stylesheet" href="/css/social.css")
+block content
+    .content
+        h2 You can find me in the following places:
+        .social
+            a(href="https://github.com/CherryKitten")
+                i(class="fa-brands fa-github")
+            a(href="https://www.freecodecamp.org/CherryKitten")
+                i(class="fa-brands fa-free-code-camp")
+            a(href="https://queer.party/@sammy")
+                i(class="fa-brands fa-mastodon")
+            a(href="https://matrix.to/#/@sammy0205:stratum0.org")
+                i(class="matrix-logo")
+            a(href="https://discordapp.com/users/Sammy 🐾 (It/Its)#6860")
+                i(class="fa-brands fa-discord")
+            a(href="https://twitter.com/CatgirlonIce")
+                i(class="fa-brands fa-twitter")
+        h2 Or you can contact me through the following form:
+        form(action="/contact", id="contact-form" method="post" role="form")
+            fieldset
+                label(for="name") Name
+                input(id="name"
+                    name="name",
+                    type ="text"
+                    placeholder="Your Name",
+                    required
+                    )
+
+                label(for="email") Email
+                input(id="email",
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                )
+
+                label(for="message") Message
+                textarea(id="message",
+                    name="message",
+                    placeholder=`Enter your message here.`,
+                    rows="5",
+                    required
+                )
+
+                button(type="submit") Submit
