@@ -1,0 +1,39 @@
+nav {
+  background-color: var(--background-secondary);
+}
+
+li {
+  color: var(--text);
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: right;
+}
+
+ul li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px;
+}
+
+ul li a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+}
+
+ul li:hover {
+  background: var(--love);
+}
+
+ul li i {
+  color: #fff;
+  float: right;
+  padding-left: 10px;
+  padding-top: 0px;
+}

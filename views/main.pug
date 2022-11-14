@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+    head
+        title Cherrykitten - #{title}
+        link(rel="stylesheet", href='/css/main.css')
+        link(rel="stylesheet", href="/css/nav.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    body
+        nav
+            div
+                ul
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/social") Social
+                    li
+                        a(href="/projects") Projects
+                    li
+                        a(href="/misc") Misc
+        h1 #{title}
+        block content
+            p Work in progress.
+        block foot
+            #footer
+                p (C)(not really) CherryKitten 2022
