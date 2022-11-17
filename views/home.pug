@@ -1,5 +1,14 @@
 extends main
 
 block content
-    div.content
-        include:markdown-it(html) ../Cherrykitten/README.md
+    .hero.bg-base-200(class="min-h-[80vh]")
+        .hero-content.text-center
+            .max-w-md
+                .avatar
+                    .w-24.rounded-full.outline.outline-4.outline-primary
+                        img(src='https://avatars.githubusercontent.com/u/20300586?v=4')
+
+
+                h1.text-5xl.font-bold.py-6 CherryKitten
+
+                h3.text-2xl.font-bold Hi, I'm Sammy. My pronouns are It/Its.

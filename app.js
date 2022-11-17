@@ -11,10 +11,15 @@ const port = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/css", express.static(path.join(__dirname, "public/css")));
+app.use("/js", express.static(path.join(__dirname, "public/js")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "pug");
 
 mainRoutes(app);
+
+app.all("*", (req, res) => {
+  res.render("404", { url: req.hostname + req.originalUrl });
+});
 
 app.listen(port, hostname, (err) => {
   if (err) console.log(err);
