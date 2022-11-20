@@ -21,7 +21,7 @@ module.exports = (app) => {
       });
 
       const mailOpts = {
-        from: "CherryKitten contact form", // This is ignored by Gmail
+        from: "CherryKitten contact form <admin@cherrykitten.dev>", // This is ignored by Gmail
         to: process.env.CONTACT_MAIL || process.env.SMTP_USER,
         subject: "New message from contact form at Cherrykitten.dev",
         text: `${req.body.name} (${req.body.email}) :\n ${req.body.message}`,
@@ -29,8 +29,10 @@ module.exports = (app) => {
 
       smtpTrans.sendMail(mailOpts, (err) => {
         if (err) {
+          console.log(err);
           res.render("contact", { title: "Social", formFailed: true }); // Show a page indicating failure
         } else {
+          console.log("Email sent!");
           res.render("contact", { title: "Contact", formSent: true }); // Show a page indicating success
         }
       });
@@ -40,7 +42,11 @@ module.exports = (app) => {
     res.render("projects", { title: "Projects" });
   });
 
-  app.route("/misc").get((req, res) => {
-    res.render("misc", { title: "Misc" });
+  app.route("/about").get((req, res) => {
+    res.render("about", { title: "About me" });
+  });
+
+  app.route("/impressum").get((req, res) => {
+    res.render("impressum", { title: "Impressum" });
   });
 };

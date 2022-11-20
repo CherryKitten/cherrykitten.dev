@@ -1,1 +1,24 @@
 extends main
+block content
+    .hero.min-h-screen(style="background-image: url(/img/Projects.jpg)")
+        .hero-overlay.bg-opacity-80
+        .hero-content.text-center.text-5xl.lg_text-base.text-neutral-content
+            .lg_max-w-md
+                h1.mb-5.text-5xl.font-bold FreeCodeCamp Projects
+                p.mb-5
+                    | A collection of projects I made for a variety of FreeCodeCamp Certifications.
+                p.mb-5
+                    | All projects in here reflect the original state from the day I submitted the project.
+                    | They will not be updated, fixed, improved, etc. I want them to show an accurate history of my learning journey.
+                a.btn.btn-primary(href="https://github.com/CherryKitten/freecodecamp-projects" target="_blank") View on GitHub
+    .hero.min-h-screen(style='background-image: url(https://github.com/CherryKitten/CharjaBox/blob/master/docs/img/mascot.png?raw=true);')
+        .hero-overlay.bg-opacity-80
+        .hero-content.text-center.text-5xl.lg_text-base.text-neutral-content
+            .max-w-md
+                h1.mb-5.text-5xl.font-bold Charjabox (no longer maintained)
+                p.mb-5
+                    | CharjaBox was an Ansible playbook that can be used to easily deploy your Homeserver setup.
+                    |
+                    | All supported applications can be installed on your server using Docker by simply changing some variables and running the playbook.
+                a.btn.btn-primary(href="https://github.com/CherryKitten/CharjaBox" target="_blank") View on GitHub
+

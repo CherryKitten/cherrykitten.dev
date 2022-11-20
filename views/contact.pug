@@ -1,37 +1,49 @@
 extends main
 block content
-    form(action="/contact" method="post")
-        .flex.justify-center.py-10
-            .form-control.max-w-md
-                label.label(for="name")
-                    span.label-text What is your name?
-                input.input.input-bordered(id="name"
-                    name="name",
-                    type ="text"
-                    placeholder="Your Name",
-                    required
+    .flex.justify-center.align-center.mt-96.lg_my-20
+        form(action="/contact" method="post")
+                .form-control.max-w-xl.lg_max-w-md
+                    label.label(for="name")
+                        span.label-text.text-4xl.lg_text-base What is your name?
+                    input.input.input-bordered.input-lg.lg_input-md(id="name"
+                        name="name",
+                        type ="text"
+                        placeholder="Your Name",
+                        required
+                        )
+
+                    label.label(for="email")
+                        span.label-text.text-4xl.lg_text-base Your Email
+                    input.input.input-bordered.input-lg.lg_input-md(id="email",
+                        name="email"
+                        type="email"
+                        placeholder="Your Email"
+                        required
                     )
 
-                label.label(for="email")
-                    span.label-text Your Email
-                input.input.input-bordered(id="email",
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                )
+                    label.label(for="message")
+                        span.label-text.text-4xl.lg_text-base Message
+                    textarea.textarea.textarea-bordered.textarea-lg.lg_textarea-md.resize-none(id="message",
+                        name="message",
+                        placeholder=`Enter your message here.`,
+                        rows="5",
+                        required
+                    )
 
-                label.label(for="message")
-                    span.label-text Message
-                textarea.textarea.textarea-bordered.resize-none(id="message",
-                    name="message",
-                    placeholder=`Enter your message here.`,
-                    rows="5",
-                    required
-                )
+                    label.label.cursor-pointer
+                        input.checkbox.checkbox-md.mx-2.checkbox-secondary(type="checkbox" required)
+                        span.label-text I promise I won't abuse this, will not send any illegal or hateful content, or enter anything otherwise inappropriate in this form.
+                    if formFailed
+                        .alert.alert-error.shadow-lg.max-w-md
+                            div
+                                svg.stroke-current.flex-shrink-0.h-6.w-6(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24')
+                                    path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z')
+                                span Could not Submit. Please try again later. The error has been logged and will be investigated.
+                    if formSent
+                        .alert.alert-success.shadow-lg.max-w-md
+                            div
+                                svg.stroke-current.flex-shrink-0.h-6.w-6(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24')
+                                    path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z')
+                                span Thank you for contacting me! I'll get back to you as soon as possible.
 
-                label.label.cursor-pointer
-                    input.checkbox.checkbox-md.mx-2.checkbox-secondary(type="checkbox" required)
-                    span.label-text I promise I won't abuse this, will not send any illegal or hateful content, or enter anything otherwise inappropriate in this form.
-
-                button.btn.btn-primary.my-4(type="submit") Submit
+                    button.btn.btn-primary.my-4(type="submit") Submit
