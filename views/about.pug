@@ -1,49 +1,49 @@
 extends main
 block content
-    .flex.justify-center.my-40.text-4xl.lg_text-base.lg_mt-20
-        .mockup-code.flex.flex-col.gap-4.max-w-2xl.px-10.lg_px-0.lg_gap-1.lg_max-w-full
-            pre(data-prefix=' ').whitespace-pre-wrap
-                code whoami
-
-            pre.text-success(data-prefix='>').whitespace-pre-wrap
+    .tabs.absolute.inset-x-0.-top-8.flex.justify-center.z-5
+        a.tab.tab-lifted.tab-active(href="/about") Summary
+        a.tab.tab-lifted(href="/about/certifications") Certifications
+    .flex.justify-center.mt-40.pb-96.lg_pb-0.text-4xl.lg_text-base.lg_mt-25
+        .mockup-code.flex.flex-col.gap-8.lg_gap-4.max-w-2xl.px-40.lg_pl-5.lg_gap-1.lg_max-w-full
+            pre.text-success(data-prefix=' ').whitespace-pre-wrap
                 code I'm Sammy. A queer catgirl who loves working with computers.
 
-            pre.text-success(data-prefix='>').whitespace-pre-wrap
+            pre.text-success(data-prefix=' ').whitespace-pre-wrap
                 code I love learning new things, trying out new technologies & exploring the unknown.
 
-            pre(data-prefix='>')
+            pre(data-prefix=' ')
                 code
 
-            pre.text-error(data-prefix='>').whitespace-pre-wrap
+            pre.text-error(data-prefix=' ').whitespace-pre-wrap
                 code My first little steps into the world of IT already started as a little kitten.
 
-            pre.text-error(data-prefix='>').whitespace-pre-wrap
+            pre.text-error(data-prefix=' ').whitespace-pre-wrap
                 code At age 12, I started learning LUA and the basics of server infrastructure
 
-            pre.text-error(data-prefix='>').whitespace-pre-wrap
+            pre.text-error(data-prefix=' ').whitespace-pre-wrap
                 code to host Gameservers with custom code for a video game I had been playing.
 
-            pre(data-prefix='>')
+            pre(data-prefix=' ')
                 code
-            pre.text-accent(data-prefix='>').whitespace-pre-wrap
+            pre.text-accent(data-prefix=' ').whitespace-pre-wrap
                 code Since then, I have been continuously expanding my knowledge
-            pre.text-accent(data-prefix='>').whitespace-pre-wrap
+            pre.text-accent(data-prefix=' ').whitespace-pre-wrap
                 code in both programming and administration.
 
-            pre(data-prefix='>')
+            pre(data-prefix=' ')
                 code
 
-            pre.text-warning(data-prefix='>').whitespace-pre-wrap
+            pre.text-warning(data-prefix=' ').whitespace-pre-wrap
                 code The linux command line is my cozy place. I selfhost almost everything.
-            pre.text-warning(data-prefix='>').whitespace-pre-wrap
+            pre.text-warning(data-prefix=' ').whitespace-pre-wrap
                 code From cloud storage and media streaming to password management and social media.
 
-            pre(data-prefix='>')
+            pre(data-prefix=' ')
                 code
 
-            pre.text-secondary(data-prefix='>').whitespace-pre-wrap
+            pre.text-secondary(data-prefix=' ').whitespace-pre-wrap
                 code To name some specifics, I have worked with Docker and Ansible, I use zsh as my main shell,
 
-            pre.text-secondary(data-prefix='>').whitespace-pre-wrap
+            pre.text-secondary(data-prefix=' ').whitespace-pre-wrap
                 code I do web development with JavaScript and know a bit of python.
 

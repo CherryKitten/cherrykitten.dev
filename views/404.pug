@@ -1,3 +1,17 @@
 extends main
 block content
-        p 404 #{url} not found
+        .hero.bg-base-200.h-screen
+                .hero-content.text-center
+                        .lg_max-w-md
+                                i.fa-solid.fa-cat.space.text-4xl.motion-safe_animate-bounce
+                                i.fa-solid.fa-shield-cat.text-4xl.motion-safe_animate-pulse
+                                br
+                                .alert.alert-error
+                                        div
+                                                svg.stroke-current.flex-shrink-0.h-6.w-6(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 24 24')
+                                                        path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z')
+                                                span 404
+
+                                br
+                                p.text-5xl.font-bold.lg_text-3xl The page #{url} could not be found.
+                                p.text-5xl.font-bold.lg_text-3xl I am very sorry.

@@ -46,6 +46,13 @@ module.exports = (app) => {
     res.render("about", { title: "About me" });
   });
 
+  app.route("/about/certifications").get((req, res) => {
+    res.render("about_certifications", { title: "About me" });
+  });
+
+  app.route("/blog").get((req, res) => {
+    res.render("blog", { title: "Blog" });
+  });
   app.route("/impressum").get((req, res) => {
     res.render("impressum", { title: "Impressum" });
   });
