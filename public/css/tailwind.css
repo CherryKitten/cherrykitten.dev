@@ -2415,6 +2415,9 @@ html {
 .pb-96 {
   padding-bottom: 24rem;
 }
+.pl-16 {
+  padding-left: 4rem;
+}
 .text-center {
   text-align: center;
 }
