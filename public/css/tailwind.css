@@ -2261,9 +2261,6 @@ html {
 .top-0 {
   top: 0px;
 }
-.bottom-0 {
-  bottom: 0px;
-}
 .z-10 {
   z-index: 10;
 }
@@ -2332,8 +2329,8 @@ html {
 .w-screen {
   width: 100vw;
 }
-.max-w-2xl {
-  max-width: 42rem;
+.max-w-4xl {
+  max-width: 56rem;
 }
 .max-w-md {
   max-width: 28rem;
@@ -2400,9 +2397,9 @@ html {
 .p-10 {
   padding: 2.5rem;
 }
-.px-40 {
-  padding-left: 10rem;
-  padding-right: 10rem;
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -2415,8 +2412,11 @@ html {
 .pb-96 {
   padding-bottom: 24rem;
 }
-.pl-16 {
-  padding-left: 4rem;
+.pl-32 {
+  padding-left: 8rem;
+}
+.pl-48 {
+  padding-left: 12rem;
 }
 .text-center {
   text-align: center;
@@ -2519,6 +2519,11 @@ html {
 }
 @media (min-width: 1024px) {
 
+  .lg_my-28 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
+
   .lg_my-20 {
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -2538,10 +2543,6 @@ html {
 
   .lg_max-w-md {
     max-width: 28rem;
-  }
-
-  .lg_max-w-full {
-    max-width: 100%;
   }
 
   .lg_grid-flow-row {
@@ -2564,6 +2565,11 @@ html {
     justify-self: end;
   }
 
+  .lg_px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .lg_py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -2575,6 +2581,10 @@ html {
 
   .lg_pl-5 {
     padding-left: 1.25rem;
+  }
+
+  .lg_pl-16 {
+    padding-left: 4rem;
   }
 
   .lg_text-3xl {
